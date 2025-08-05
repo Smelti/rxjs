@@ -1,4 +1,4 @@
 export interface IParamText {
-  text: string;
-  hub: string;
+  readonly text: string;
+  readonly hub: string;
 }

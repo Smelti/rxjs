@@ -4,9 +4,9 @@ import { IParamText } from "./interfaces/text-param";
 
 @Controller("rxjs")
 export class RxjsController {
-  constructor(private rxjsService: RxjsService) {}
+  constructor(private readonly rxjsService: RxjsService) {}
 
-  @Get("repositories/")
+  @Get("repositories")
   async repositories(@Query() { text, hub }: IParamText) {
     return await this.rxjsService.searchRepositories(text, hub);
   }
